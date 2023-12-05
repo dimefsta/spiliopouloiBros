@@ -1,0 +1,208 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ebebeb;
+    color: #333;
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #ebebeb;
+    padding: 10px;
+    border-bottom: 3px solid rgb(63, 133, 214);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    background-color: #c8c7c7;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: rgb(63, 133, 214);
+}
+
+.logo img {
+    height: 85px;
+    width: auto;
+}
+
+main {
+    padding: 20px;
+}
+
+.promotion {
+    position: relative;
+    text-align: center;
+    background-color: rgb(63, 133, 214);
+    padding: 20px;
+    color:  #fff;
+    border-radius: 15px;
+}
+
+.promotion img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the image */
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.promotion h1,
+.promotion p {
+    color:  #fff;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+    justify-content: space-between;
+    margin-top: 20px;
+    color: balck;
+}
+
+.column {
+    flex: 0 0 calc(30% - 20px); /* Adjusted width with margin */
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    background-color: #c8c7c7;
+}
+
+.column:hover {
+    transform: scale(1.05);
+}
+
+.column img {
+    max-width: 100%; /* Ensure product images don't exceed their container */
+    height: auto;
+}
+
+
+footer {
+    background-color: #c8c7c7;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-left,
+.footer-right {
+    width: 45%;
+}
+
+/* Additional styles for the paint shop footer */
+.footer-left {
+    text-align: left;
+    color: black; /* Better color for text */
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right img {
+    height: 50px; /* Adjust the height to your desired size */
+    width: auto;
+}
+
+
+/* about css*/
+
+main.center-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+main.center-content h1 {
+    color: rgb(63, 133, 214);
+    margin-bottom: 20px;
+}
+
+main.center-content p {
+    line-height: 1.6;
+    color: black;
+    margin-bottom: 20px;
+}
+
+
+#contact-info,
+#map {
+    margin-bottom: 30px;
+}
+
+.contact-details {
+    text-align: center;
+}
+
+.contact-details p {
+    margin: 10px 0;
+}
+
+#map {
+    max-width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+
+
+/* contact css */
+#contact-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.map-container {
+    max-width: 50%;
+}
+
+.address-details {
+    max-width: 45%;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
