@@ -77,34 +77,45 @@ footer {
     width: auto;
 }
 
-/* About and Contact page styles */
+/* About page styles */
 main.center-content h1 {
     color: rgb(63, 133, 214);
     margin-bottom: 20px;
-    text-align: center;
 }
 
+main.center-content p {
+    line-height: 1.6;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Contact page styles */
 #contact-info {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     text-align: center;
     margin-top: 60px;
     margin-bottom: 30px;
 }
 
+h1 {
+    color: rgb(63, 133, 214);
+    margin-bottom: 20px;
+}
+
 .contact-details {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     max-width: 800px;
 }
 
 .map-container,
 .address-details,
 .business-hours {
-    flex: 1 1 calc(100% - 20px); /* Adjusted width with margin */
+    flex: 0 0 calc(100% - 20px);
     margin-bottom: 20px;
 }
 
@@ -113,9 +124,14 @@ main.center-content h1 {
     max-width: 100%;
 }
 
-.address-details,
+.address-details {
+    order: 2;
+    max-width: 100%;
+}
+
 .business-hours {
-    order: 2; /* Move address and business hours below the map */
+    order: 3;
+    max-width: 100%;
 }
 
 .map-container iframe {
