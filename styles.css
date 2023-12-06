@@ -50,92 +50,79 @@ main {
     padding: 20px;
 }
 
-footer {
-    background-color: #c8c7c7;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-left,
-.footer-right {
-    width: 45%;
-}
-
-.footer-left {
-    text-align: left;
-    color: black;
-}
-
-.footer-right {
-    text-align: right;
-}
-
-.footer-right img {
-    height: 50px;
-    width: auto;
-}
-
-/* About page styles */
-main.center-content h1 {
-    color: rgb(63, 133, 214);
-    margin-bottom: 20px;
-}
-
-main.center-content p {
-    line-height: 1.6;
-    color: black;
-    margin-bottom: 20px;
-}
-
-/* Contact page styles */
-#contact-info {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+/* Promotion section styles */
+.promotion {
+    position: relative;
     text-align: center;
-    margin-top: 60px;
-    margin-bottom: 30px;
+    background-color: #ffcc00;
+    padding: 20px;
+    color: #333;
+    border-radius: 15px;
 }
 
-h1 {
-    color: rgb(63, 133, 214);
-    margin-bottom: 20px;
+.promotion img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the image */
 }
 
-.contact-details {
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.promotion h1,
+.promotion p {
+    color: #333;
+}
+
+/* Products section adjustments */
+.products {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 800px;
+    justify-content: space-around; /* Align columns with space between them */
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    margin-top: 20px; /* Add space above the products section */
 }
 
-.map-container,
-.address-details,
-.business-hours {
-    flex: 0 0 calc(100% - 20px);
-    margin-bottom: 20px;
+.column {
+    flex: 0 0 calc(30% - 20px);
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    background-color: bisque;
 }
 
-.map-container {
-    order: 1;
+.column:hover {
+    transform: scale(1.15);
+}
+
+.column img {
     max-width: 100%;
+    height: auto;
 }
 
-.address-details {
-    order: 2;
-    max-width: 100%;
-}
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
 
-.business-hours {
-    order: 3;
-    max-width: 100%;
-}
+    nav li {
+        margin: 10px 0;
+    }
 
-.map-container iframe {
-    width: 100%;
+    .map-container,
+    .address-details,
+    .business-hours,
+    .promotion,
+    .column {
+        flex: 0 0 calc(100% - 20px);
+        margin-right: 0;
+    }
 }
 
 /* Responsive Adjustments for Larger Screens */
@@ -158,7 +145,8 @@ h1 {
 
     .map-container,
     .address-details,
-    .business-hours {
+    .business-hours,
+    .promotion {
         margin-right: 20px;
     }
 }
@@ -171,23 +159,5 @@ h1 {
 
     main.center-content {
         max-width: 1200px;
-    }
-}
-
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-
-    nav li {
-        margin: 10px 0;
-    }
-
-    .map-container,
-    .address-details,
-    .business-hours {
-        flex: 0 0 calc(100% - 20px);
-        margin-right: 0;
     }
 }
