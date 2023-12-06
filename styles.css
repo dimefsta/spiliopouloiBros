@@ -1,3 +1,4 @@
+/* Common styles for all pages */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -49,61 +50,6 @@ main {
     padding: 20px;
 }
 
-.promotion {
-    position: relative;
-    text-align: center;
-    background-color: rgb(63, 133, 214);
-    padding: 20px;
-    color:  #fff;
-    border-radius: 15px;
-}
-
-.promotion img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto; /* Center the image */
-}
-
-.text-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-}
-
-.promotion h1,
-.promotion p {
-    color:  #fff;
-}
-
-.products {
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
-    justify-content: space-between;
-    margin-top: 20px;
-    color: balck;
-}
-
-.column {
-    flex: 0 0 calc(30% - 20px); /* Adjusted width with margin */
-    text-align: center;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
-    background-color: #c8c7c7;
-}
-
-.column:hover {
-    transform: scale(1.05);
-}
-
-.column img {
-    max-width: 100%; /* Ensure product images don't exceed their container */
-    height: auto;
-}
-
-
 footer {
     background-color: #c8c7c7;
     padding: 10px;
@@ -111,15 +57,15 @@ footer {
     justify-content: space-between;
     align-items: center;
 }
+
 .footer-left,
 .footer-right {
     width: 45%;
 }
 
-/* Additional styles for the paint shop footer */
 .footer-left {
     text-align: left;
-    color: black; /* Better color for text */
+    color: black;
 }
 
 .footer-right {
@@ -127,82 +73,105 @@ footer {
 }
 
 .footer-right img {
-    height: 50px; /* Adjust the height to your desired size */
+    height: 50px;
     width: auto;
 }
 
-
-/* about css*/
-
-main.center-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
+/* About and Contact page styles */
 main.center-content h1 {
     color: rgb(63, 133, 214);
     margin-bottom: 20px;
+    text-align: center;
 }
 
-main.center-content p {
-    line-height: 1.6;
-    color: black;
-    margin-bottom: 20px;
-}
-
-
-#contact-info,
-#map {
+#contact-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 60px;
     margin-bottom: 30px;
 }
 
 .contact-details {
-    text-align: center;
-}
-
-.contact-details p {
-    margin: 10px 0;
-}
-
-#map {
-    max-width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    overflow: hidden;
-}
-
-
-
-/* contact css */
-#contact-info {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+}
+
+.map-container,
+.address-details,
+.business-hours {
+    flex: 1 1 calc(100% - 20px); /* Adjusted width with margin */
+    margin-bottom: 20px;
 }
 
 .map-container {
-    max-width: 50%;
+    order: 1;
+    max-width: 100%;
 }
 
-.address-details {
-    max-width: 45%;
+.address-details,
+.business-hours {
+    order: 2; /* Move address and business hours below the map */
 }
 
+.map-container iframe {
+    width: 100%;
+}
 
+/* Responsive Adjustments for Larger Screens */
+@media (min-width: 1200px) {
+    nav ul {
+        justify-content: flex-end;
+    }
 
+    nav li {
+        margin: 0 20px;
+    }
 
+    .column {
+        flex: 0 0 calc(30% - 40px);
+    }
 
+    main {
+        padding: 40px;
+    }
 
+    .map-container,
+    .address-details,
+    .business-hours {
+        margin-right: 20px;
+    }
+}
 
+/* Further adjustments for even larger screens if needed */
+@media (min-width: 1600px) {
+    nav ul {
+        font-size: 18px;
+    }
+
+    main.center-content {
+        max-width: 1200px;
+    }
+}
+
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
     }
 
-    .nav-links {
-        margin-top: 10px;
+    nav li {
+        margin: 10px 0;
     }
 
-    .nav-links li {
-        margin: 10px 0;
+    .map-container,
+    .address-details,
+    .business-hours {
+        flex: 0 0 calc(100% - 20px);
+        margin-right: 0;
     }
 }
