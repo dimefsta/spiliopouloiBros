@@ -104,6 +104,32 @@ main {
     max-width: 100%;
     height: auto;
 }
+footer {
+    background-color: #c8c7c7;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left,
+.footer-right {
+    width: 45%;
+}
+
+.footer-left {
+    text-align: left;
+    color: black;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right img {
+    height: 50px;
+    width: auto;
+}
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
