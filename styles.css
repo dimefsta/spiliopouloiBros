@@ -50,13 +50,12 @@ main {
     padding: 20px;
 }
 
-/* Promotion section styles */
 .promotion {
     position: relative;
     text-align: center;
-    background-color: #ffcc00;
+    background-color: rgb(63, 133, 214);
     padding: 20px;
-    color: #333;
+    color: #fff;
     border-radius: 15px;
 }
 
@@ -77,31 +76,31 @@ main {
 
 .promotion h1,
 .promotion p {
-    color: #333;
+    color: #fff;
 }
 
-/* Products section adjustments */
 .products {
     display: flex;
-    justify-content: space-around; /* Align columns with space between them */
-    flex-wrap: wrap; /* Allow items to wrap to the next row */
-    margin-top: 20px; /* Add space above the products section */
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+    justify-content: space-between;
+    margin-top: 20px;
+    color: black;
 }
 
 .column {
-    flex: 0 0 calc(30% - 20px);
-    margin: 10px;
+    flex: 0 0 calc(30% - 20px); /* Adjusted width with margin */
     text-align: center;
+    margin-bottom: 20px;
     transition: transform 0.3s ease;
-    background-color: bisque;
+    background-color: #c8c7c7;
 }
 
 .column:hover {
-    transform: scale(1.15);
+    transform: scale(1.05);
 }
 
 .column img {
-    max-width: 100%;
+    max-width: 100%; /* Ensure product images don't exceed their container */
     height: auto;
 }
 footer {
