@@ -131,13 +131,23 @@ footer {
 }
 
 /* Responsive adjustments for smaller screens */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
+        align-items: center; /* Center the items */
+        background-color: #63adff; /* Change the background color for better visibility */
+        padding: 10px; /* Add padding for better spacing */
+        border-radius: 15px; /* Add border-radius for a rounded look */
     }
 
     nav li {
         margin: 10px 0;
+        text-align: center; /* Center the text */
+    }
+
+    nav a {
+        margin-right: 0; /* Remove the right margin */
     }
 
     .map-container,
@@ -149,6 +159,7 @@ footer {
         margin-right: 0;
     }
 }
+
 
 /* Responsive Adjustments for Larger Screens */
 @media (min-width: 1200px) {
