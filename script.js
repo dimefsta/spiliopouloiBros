@@ -28,7 +28,7 @@ const templateId = "template_f2rgmn5";
 // Initialize Email.js with your user ID
 emailjs.init(publicKey);
 
-quoteForm.addEventListener("submit", e => {
+quoteForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     submitBtn.innerText = "Μισό δευτερόλεπτο...";
 
@@ -38,20 +38,20 @@ quoteForm.addEventListener("submit", e => {
         squareMeters: sqmInput.value,
         surfaceType: surfaceTypeInput.value,
         location: locInput.value,
-        additionalInfo: addInfoInput.value
-    }
+        additionalInfo: addInfoInput.value,
+    };
 
-    emailjs.send(serviceId, templateId, inputFields)
-        .then(() => {
-            submitBtn.innerText = "Εστάλη επιτυχώς";
-            nameInput.value = "";
-            emailInput.value = "";
-            sqmInput.value = "";
-            surfaceTypeInput.value = "";
-            locInput.value = "";
-            addInfoInput.value = "";            
-        }, (error) => {
-            console.log(error);
-            submitBtn.innerText = "Κάτι πήγε στραβά";
-        });
+    try {
+        await emailjs.send(serviceId, templateId, inputFields);
+        submitBtn.innerText = "Εστάλη επιτυχώς";
+        nameInput.value = "";
+        emailInput.value = "";
+        sqmInput.value = "";
+        surfaceTypeInput.value = "";
+        locInput.value = "";
+        addInfoInput.value = "";
+    } catch (error) {
+        console.log(error);
+        submitBtn.innerText = "Κάτι πήγε στραβά";
+    }
 });
