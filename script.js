@@ -1,7 +1,3 @@
-// Add this code to change the logo size dynamically
-const logoImage = document.getElementById('logoImage');
-logoImage.classList.add('bigger');
-
 const quoteForm = document.querySelector('#quoteForm');
 const submitBtn = document.querySelector('.submit-btn');
 const nameInput = document.querySelector('#fullName');
