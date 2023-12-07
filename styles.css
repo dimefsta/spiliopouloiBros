@@ -143,35 +143,37 @@ form {
 }
 
 label {
-    margin-bottom: 8px;
+    margin-bottom: 12px; /* Increased margin for labels */
+    font-size: 16px; /* Increased font size for labels */
 }
 
 input,
 select,
 textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 16px;
+    padding: 12px; /* Increased padding for form elements */
+    margin-bottom: 20px; /* Increased margin for form elements */
     box-sizing: border-box;
+    font-size: 16px; /* Increased font size for form elements */
 }
 
 input[type="checkbox"] {
     width: auto;
-    margin-right: 8px;
+    margin-right: 12px; /* Increased margin for checkboxes */
 }
 
 button {
     background-color: rgb(63, 133, 214);
     color: #fff;
-    padding: 12px 24px;
+    padding: 14px 28px; /* Increased padding for the button */
     border: none;
-    border-radius: 9px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #ffffff;
+    background-color: #3f85d6;
 }
 
 
