@@ -130,7 +130,9 @@ footer {
     width: auto;
 }
 
-
+.quoteh1 {
+    color: rgb(63, 133, 214);
+}
 
 #quote-form {
     max-width: 600px;
@@ -173,7 +175,8 @@ button {
 }
 
 button:hover {
-    background-color: #3f85d6;
+    background-color: #ffff;
+    color: rgb(63, 133, 214);
 }
 
 
