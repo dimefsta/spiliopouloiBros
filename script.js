@@ -46,6 +46,6 @@ quoteForm.addEventListener("submit", e => {
         },  (error)  => {
                 console.log(error);
 
-                submitBtn.innerText = "Κάτι πήγε στραβά"
+                submitBtn.innerText = "Κάτι πήγε στραβά";
         });
 });
