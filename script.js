@@ -41,18 +41,17 @@ quoteForm.addEventListener("submit", e => {
         additionalInfo: addInfoInput.value
     }
 
-    emailjs.send(serviceId,templateId,inputFields)
+    emailjs.send(serviceId, templateId, inputFields)
         .then(() => {
-            submitBtn.innerttext = "Εστάλη επιτυχώς";
+            submitBtn.innerText = "Εστάλη επιτυχώς";
             nameInput.value = "";
             emailInput.value = "";
             sqmInput.value = "";
             surfaceTypeInput.value = "";
             locInput.value = "";
             addInfoInput.value = "";            
-        },  (error)  => {
-                console.log(error);
-
-                submitBtn.innerText = "Κάτι πήγε στραβά";
+        }, (error) => {
+            console.log(error);
+            submitBtn.innerText = "Κάτι πήγε στραβά";
         });
 });
