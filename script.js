@@ -43,7 +43,7 @@ quoteForm.addEventListener("submit", async (e) => {
 
     try {
         await emailjs.send(serviceId, templateId, inputFields);
-        submitBtn.innerText = "Εστάλη επιτυχώς";
+        submitBtn.innerText = "Αποστολή";
         nameInput.value = "";
         emailInput.value = "";
         sqmInput.value = "";
