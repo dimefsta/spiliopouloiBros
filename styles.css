@@ -159,7 +159,7 @@ input,
 select,
 textarea {
     width: 100%;
-    padding: 12px;
+    padding: 20px;
     margin-bottom: 20px;
     box-sizing: border-box;
     font-size: 16px;
@@ -235,6 +235,12 @@ button:hover {
     nav.active {
         display: flex;
         flex-direction: column;
+    }
+
+    input,
+    select,
+    textarea {
+        padding: 12px; /* Adjust padding for smaller screens */
     }
 }
 
