@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const locInput = document.querySelector('#location');
     const addInfoInput = document.querySelector('#additionalInfo');
 
-    quoteForm.addEventListener("submit", (e) => {
+    quoteForm.addEventListener("submit", async (e) => {
         e.preventDefault();
         submitBtn.innerText = "Μισό δευτερόλεπτο...";
 
