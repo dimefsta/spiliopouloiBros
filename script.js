@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const locInput = document.querySelector('#location');
     const addInfoInput = document.querySelector('#additionalInfo');
 
-    quoteForm.addEventListener("submit", async (e) => {
+    quoteForm.addEventListener("submit", (e) => {
         e.preventDefault();
         submitBtn.innerText = "Μισό δευτερόλεπτο...";
 
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         try {
             await emailjs.send(serviceId, templateId, inputFields);
-            submitBtn.innerText = "Αποστολή";
+            submitBtn.innerText = "Στάλθηκε επιτυχώς";
             nameInput.value = "";
             emailInput.value = "";
             sqmInput.value = "";
