@@ -46,7 +46,9 @@ nav a:hover {
     width: auto;
 }
 
-main {
+/*index.html css */
+
+.main {
     padding: 20px;
 }
 
@@ -63,7 +65,7 @@ main {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto; /* Center the image */
+    margin: 0 auto;
 }
 
 .text-overlay {
@@ -81,14 +83,14 @@ main {
 
 .products {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 20px;
     color: black;
 }
 
 .column {
-    flex: 0 0 calc(30% - 20px); /* Adjusted width with margin */
+    flex: 0 0 calc(30% - 20px);
     text-align: center;
     margin-bottom: 20px;
     transition: transform 0.3s ease;
@@ -100,9 +102,12 @@ main {
 }
 
 .column img {
-    max-width: 100%; /* Ensure product images don't exceed their container */
+    max-width: 100%;
     height: auto;
 }
+
+/* Footer css*/
+
 footer {
     background-color: #c8c7c7;
     padding: 10px;
@@ -130,6 +135,7 @@ footer {
     width: auto;
 }
 
+/*quote.html css*/
 .quoteh1 {
     color: rgb(63, 133, 214);
 }
@@ -145,29 +151,29 @@ form {
 }
 
 label {
-    margin-bottom: 12px; /* Increased margin for labels */
-    font-size: 16px; /* Increased font size for labels */
+    margin-bottom: 12px;
+    font-size: 16px;
 }
 
 input,
 select,
 textarea {
     width: 100%;
-    padding: 12px; /* Increased padding for form elements */
-    margin-bottom: 20px; /* Increased margin for form elements */
+    padding: 12px;
+    margin-bottom: 20px;
     box-sizing: border-box;
-    font-size: 16px; /* Increased font size for form elements */
+    font-size: 16px;
 }
 
 input[type="checkbox"] {
     width: auto;
-    margin-right: 12px; /* Increased margin for checkboxes */
+    margin-right: 12px;
 }
 
 button {
     background-color: rgb(63, 133, 214);
     color: #fff;
-    padding: 14px 28px; /* Increased padding for the button */
+    padding: 14px 28px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -179,27 +185,23 @@ button:hover {
     color: rgb(63, 133, 214);
 }
 
-
-
-
-
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
-        align-items: center; /* Center the items */
-        background-color: #63adff; /* Change the background color for better visibility */
-        padding: 10px; /* Add padding for better spacing */
-        border-radius: 15px; /* Add border-radius for a rounded look */
+        align-items: center;
+        background-color: #63adff;
+        padding: 10px;
+        border-radius: 15px;
     }
 
     nav li {
         margin: 10px 0;
-        text-align: center; /* Center the text */
+        text-align: center;
     }
 
     nav a {
-        margin-right: 0; /* Remove the right margin */
+        margin-right: 0;
     }
 
     .map-container,
@@ -210,8 +212,31 @@ button:hover {
         flex: 0 0 calc(100% - 20px);
         margin-right: 0;
     }
-}
 
+    .mobile-menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .mobile-menu-toggle span {
+        height: 3px;
+        width: 25px;
+        background-color: #333;
+        margin: 5px 0;
+        display: block;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+    }
+
+    nav.active {
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 /* Responsive Adjustments for Larger Screens */
 @media (min-width: 1200px) {

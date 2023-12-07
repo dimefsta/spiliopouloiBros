@@ -1,3 +1,14 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const nav = document.querySelector('nav');
+
+    mobileMenuToggle.addEventListener('click', function () {
+        nav.classList.toggle('active');
+    });
+});
+
+
+
 const quoteForm = document.querySelector('#quoteForm');
 const submitBtn = document.querySelector('.submit-btn');
 const nameInput = document.querySelector('#fullName');
