@@ -53,9 +53,12 @@
                     <option value="other">Άλλο</option>
                 </select>
 
-                <label for="location">Εσωτερικό/Εξωτερικό:</label>
-                <input type="checkbox" id="location" name="location">
 
+                <label for="location">Εσωτερικά ή Εξωτερικά:</label>
+                <select id="location" name="location" required>
+                    <option value="interior">Εσωτερικά</option>
+                    <option value="exterior">Εξωτερικά</option>
+                </select>
                 <label for="additionalInfo">Επιπλέον Πληροφορίες:</label>
                 <textarea id="additionalInfo" name="additionalInfo" rows="4"></textarea>
 
