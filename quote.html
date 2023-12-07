@@ -35,7 +35,7 @@
     <main class="center-content">
         <h1 class="quoteh1">Ζητήστε Προσφορά</h1>
         <section id="quote-form">
-            <form>
+            <form id="quoteForm">
                 <label for="fullName">Ονοματεπώνυμο:</label>
                 <input type="text" id="fullName" name="fullName" required>
 
@@ -62,7 +62,7 @@
                 <label for="additionalInfo">Επιπλέον Πληροφορίες:</label>
                 <textarea id="additionalInfo" name="additionalInfo" rows="4"></textarea>
 
-                <button type="submit">Αποστολή</button>
+                <button type="submit" class="submit-btn">Αποστολή</button>
             </form>
         </section>
     </main>
@@ -76,5 +76,8 @@
             <img src="Assets/logob.png" alt="Λογότυπο">
         </div>
     </footer>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
